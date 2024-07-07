@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="tabs">
+        <button class="tablink" onclick="openTab(event, 'Tab1')">Table generator</button>
+        <button class="tablink" onclick="openTab(event, 'Tab2')">Tips</button>
+        <button class="tablink" onclick="openTab(event, 'Tab3')">About me</button>
+    </div>
+
+    <div id="Tab1" class="tabcontent">
+        <div class="container">
+            <h1>יצירת טבלה\רשימה לארגון המשימות</h1>
+            <label for="rows">מספר שורות:</label>
+            <input type="number" id="rows" name="rows" min="1">
+            <label for="cols">מספר עמודות:</label>
+            <input type="number" id="cols" name="cols" min="1">
+            <button id="createTable">יצירה</button>
+            <br><br>
+            <label for="borderColor">צבע מסגרת:</label>
+            <select id="borderColor">
+                <option value="">בחר צבע</option>
+                <option value="#FFB6C1">ורוד</option>
+                <option value="#ADD8E6">תכלת</option>
+                <option value="#FFFFE0">צהוב</option>
+                <option value="#E6E6FA">לבנדר</option>
+                <option value="#D8BFD8">סגול</option>
+            </select>
+            <button id="changeBorderColor">שנה צבע מסגרת</button>
+            <br><br>
+            <label for="cellColor">צבע פנימי:</label>
+            <select id="cellColor">
+                <option value="">בחר צבע</option>
+                <option value="#FFB6C1">ורוד</option>
+                <option value="#ADD8E6">תכלת</option>
+                <option value="#FFFFE0">צהוב</option>
+                <option value="#E6E6FA">לבנדר</option>
+                <option value="#D8BFD8">סגול</option>
+            </select>
+            <button id="changeCellColor">שנה צבע פנימי</button>
+            <br><br>
+            <button id="increaseSize">+</button>
+            <button id="decreaseSize">-</button>
+            <div id="tableContainer"></div>
+        </div>
+    </div>
+
+    <div id="Tab2" class="tabcontent">
+        <div class="container">
+
+            <header>
+                <h1>טיפים לארגון וסידור הזמן</h1>
+              </header>
+              <article>
+                <h1 style="background-color:Violet;">הקדמה</h1>
+                <h2>החיים שלנו מבוססים על ניהול וארגון נכון של סדר ולוח זמנים זוהי מיומנות חיונית שמשפיעה על כל היבטי החיים שלנו, 
+                    על סדרי העדיפויות שלנו ומה נכון נחוץ והכרחי לרגע מסויים.
+                   
+     במיוחד במצבים תחרותיים או צפופים. היכולת לתכנן מראש, להקצות זמן בצורה אפקטיבית ויעילה יכולה לשמור על ריכוז לאורך זמן ובעיקר יכולה לעשות את ההבדל בין הצלחה לכישלון. הרבה פעמים סידור וארגון זמן יכול לעזור לנו להגיע לגרסה הכי טובה של עצמנו ולכן זוהי מיומנות מאוד חשובה בחייו של כול אדם וחשוב לדעת איך לעשות זאת נכון</h2>
+              </article>
+              <img src="time.jpg" alt="time">
+              <article>
+                <h2> דוגמה קלאסית לארגון וסדר זמן מתוך משחק קלפים מוכר- פוקר
+                    פוקר הוא משחק קלפים שבו השחקנים מתחרים זה בזה כדי ליצור את היד החזקה ביותר. לכל שחקן מחולקים 2 קלפים  לפי גרסת המשחק הבסיסית וחמישה קלפים מונחים על השולחן. השחקנים יכולים להשתמש בכל שילוב של הקלפים שלהם והקלפים שמונחים על השולחן כדי ליצור את היד הטובה ביותר. המשחק משלב אסטרטגיה, חישוב הסתברויות ויכולת לקרוא את היריבים, ומסתיים כשאחד השחקנים מנצח על ידי יצירת היד החזקה ביותר או באמצעות בלוף מוצלח שגורם ליריבים לפרוש.
+                    ארגון נכון של הזמן במשחק פוקר חשוב לשחקנים מכל הרמות כי הוא מחייב קבלת החלטות מושכלת ומהירה, ניהול לחץ וסטרס, וניתוח ולמידה לאחר המשחק כדי לשחק בדרך המוצלחת ביותר ולנצח בסופו של דבר את כלל היריבים. המשחק מאלץ את השחקנים לחשוב באופן מתוחכם ולדעת מה כדי לעשות ברגע מסויים שמלווה בלחץ של זמן והחשש להפסיד.
+
+                </h2>
+
+              </article>
+
+
+              <img src="poker.jpg" alt="poker">
+
+
+              <header>
+                <h1> ?איך לסדר את הזמן באופן יעיל</h1>
+              </header>
+
+<article>
+<h2>
+קביעת מטרות ויעדים
+</h2>
+<h1> </h1>
+    הגדירו מטרות ברורות: הציבו מטרות ברורות. המטרות יכולות להיות יומיות, שבועיות, חודשיות או שנתיות.
+    וחלקו למשימות קטנות: חלקו את המטרות למשימות קטנות יותר, כדי שהן יהיו פחות כלליות\גדולות ויותר ניתנות לניהול בצעדים קטנים יותר.
+</h1>
+<h1>
+     תכנון הזמן
+    <h1> </h1>
+    השתמשו בלוח שנה:  שבו תוכלו לרשום את כל המשימות\פגישות ופעולות שעלייך לבצע .
+    השתמשו ברשימות  To-Do LIST: צרו רשימה או טבלת משימות יומיות ושבועיות. זה עוזר לזכור דברים חשובים ולעקוב אחרי ההתקדמות וגם אחרי ביצוע המשימה לסמן עליהן איקס מוסיף לתחושה הטובה.
+    הגדרת זמנים קבועים: קבע זמנים קבועים שלא ישתנו לעיתים קרובות למשימות חשובות כמו עבודה, לימודים ופעילות גופנית וזמן אישי ופנאי.
+</h1>
+<h1>
+   סדרי עדיפויות
+    <h1> </h1>
+    סידור המשימות מהחשוב ביותר לביצוע למשימות שניתנות טיפה יותר לדחייה,
+    טפלו קודם במשימות החשובות: התחיל את היום במשימות החשובות ביותר כדי להבטיח שהן יבוצעו.
+</h1>
+<h1>
+    ניהול זמן אישי
+    <h1> </h1>
+    קבעו זמן לתכנון במסודר: הקדישו זמן מדי יום לתכנון והערכת המשימות.
+    הימנעו מהסחות דעת בזמן העבודה על משימות חשובות
+    שימוש בטכניקות זמן שונות כמו שיטת פומדורו 
+</h1>
+<h1>
+     איזון
+    <h1> </h1>
+    קבעו זמן לפעילות גופנית: פעילות גופנית משפרת את המיקוד והבריאות הכללית ותשאיר אתכם מפוקסים במשך יותר זמן.
+    קבעו זמן למנוחה: לקיחת הפסקות ולנוח תעזור לנו להמשיך להתמקד בדברים החשובים שעלינו לבצע.
+    שינה מספקת: שינה מספקת משפרת את היכולת להתרכז ולהיות פרודוקטיבי.
+</h1>
+<h1>
+
+     טכנולוגיה
+    <h1> </h1>
+    אפליקציות ניהול זמן: תוכלו להעיזר ולהשתמש באפליקציות או באתרים שיוכלו לעזור לכם לנהל את הזמן ביעילות 
+    (לדוגמה- האתר הנוכחי)
+    על ידי שימוש בטיפים אלה, תוכלו לשפר את היכולת שלך לנהל את הזמן להשיג יותר במהלך היום ולבצע את המקסימום שניתן לעשות.
+
+
+</h1>
+
+
+</article>
+
+<h2
+    style="background-color:rgb(252, 248, 41);">לקריאה נוספת</h2> 
+
+    <p><a href="https://sagol-lectures.co.il/%D7%9E%D7%90%D7%9E%D7%A8%D7%99%D7%9D/%D7%A0%D7%99%D7%94%D7%9C-%D7%96%D7%9E%D7%9F-%D7%95%D7%9E%D7%A9%D7%99%D7%9E%D7%95%D7%AA/">ניהל זמן ומשימות: המדריך המדוייק לניהול זמן בעידן החדש</a></p>
+  
+    <p><a href="https://www.icount.co.il/blog/%D7%A0%D7%99%D7%94%D7%95%D7%9C-%D7%96%D7%9E%D7%9F-%D7%90%D7%99%D7%9A-%D7%A2%D7%95%D7%A9%D7%99%D7%9D-%D7%90%D7%AA-%D7%96%D7%94-%D7%A0%D7%9B%D7%95%D7%9F/">ניהול זמן איך עושים את זה נכון?</a></p>
+
+        </div>
+    </div>
+
+
+
+    <div id="Tab3" class="tabcontent">
+        <div class="container">
+
+            <header>    
+                <h1>אודות</h1>
+              </header>
+           
+         
+           <h3>אתר זה עוסק בארגון וסידור הזמן באופן אינדיבידואלי לכול משתמש ומטרתו ליצור חווית משתמש נוחה ונגישה עבור כולם מתוך רעיונות ועיצוב שונים </h3>
+
+<h2>
+
+פרוייקט סייבר 2024
+</h2>
+<h2>
+ליאל גרייגי 
+</h2>
+<h2>
+lielgray@gmail.com
+
+</h2>
+
+
+        </div>
+    
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // פותח את הטאב הראשון כברירת מחדל
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementsByClassName('tablink')[0].click();
+        });
+    </script>
+</body>
+</html>
