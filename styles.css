@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url('https://example.com/path/to/your/image.jpg'); /* שים את כתובת התמונה כאן */
+    background-image: url('https://example.com/path/to/your/image.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -42,18 +42,18 @@ body {
 
 .tabcontent {
     display: none;
-    padding: 60px 20px; /* מוסיפים רווח מתחת לטאבים */
+    padding: 60px 20px; 
     width: 100%;
     box-sizing: border-box;
     flex-grow: 1;
-    background-image: url('https://i.pinimg.com/474x/2d/ff/ed/2dffed8036f5e49e723d4d48ec1faba8.jpg'); /* שים את כתובת התמונה כאן */
+    background-image: url('https://i.pinimg.com/474x/2d/ff/ed/2dffed8036f5e49e723d4d48ec1faba8.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .container {
-    background-color: rgba(255, 255, 255, 0.8); /* חצי שקיפות כדי לראות את הרקע */
+    background-color: rgba(255, 255, 255, 0.8); 
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
